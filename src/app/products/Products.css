@@ -1,0 +1,402 @@
+.products-title {
+  color: white;
+  text-align: center;
+  font-size: 30px;
+  text-transform: uppercase;
+  margin: 25px;
+  font-weight: 600;
+}
+
+@keyframes animatedTextGradient {
+  to {
+    background-position: 200% center;
+  }
+}
+
+.products-container {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  margin: 6rem;
+  gap: 19px;
+}
+
+.product-item {
+  padding: 10px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  margin: 10px;
+  border-radius: 2px;
+  box-shadow: 5px 5px 10px 5px rgba(159, 159, 159, 0.184);
+}
+
+.product-item:hover img {
+  transform: scale(1.05);
+}
+
+.product-item img {
+  width: 200px;
+  border-radius: 5px;
+  margin: 10px 5px;
+  height: auto;
+  transition: .2s;
+}
+
+.product-item h5 {
+  font-size: 20px;
+  margin: 10px 0;
+  font-weight: 600;
+  color: rgb(119, 30, 30);
+}
+
+.product-item a {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.pagination-button {
+  margin: 5px;
+  padding: 5px 10px;
+  background: gray;
+  border-radius: 2px;
+  color: white;
+}
+
+.pagination-button:hover {
+  background-color: #09679d;
+}
+
+.pagination-button.active {
+  background-color: #581412;
+  color: white;
+  font-weight: bold;
+}
+
+.overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background: rgb(255, 255, 255);
+  z-index: 9999;
+}
+
+.lds-facebook,
+.lds-facebook div {
+  box-sizing: border-box;
+}
+
+.lds-facebook {
+  display: inline-block;
+  position: relative;
+  width: 80px;
+  height: 80px;
+}
+
+.lds-facebook div {
+  display: inline-block;
+  position: absolute;
+  left: 8px;
+  width: 16px;
+  background: #60120f;
+  animation: lds-facebook 1.2s cubic-bezier(0, 0.5, 0.5, 1) infinite;
+}
+
+.lds-facebook div:nth-child(1) {
+  left: 8px;
+  animation-delay: -0.24s;
+}
+
+.lds-facebook div:nth-child(2) {
+  left: 32px;
+  animation-delay: -0.12s;
+}
+
+.lds-facebook div:nth-child(3) {
+  left: 56px;
+  animation-delay: 0s;
+}
+
+@keyframes lds-facebook {
+  0% {
+    top: 8px;
+    height: 64px;
+  }
+  50%, 100% {
+    top: 24px;
+    height: 32px;
+  }
+}
+
+#search {
+  display: grid;
+  grid-area: search;
+  grid-template:
+    "search"60px / 420px;
+  justify-content: center;
+  align-content: center;
+  justify-items: stretch;
+  align-items: stretch;
+  padding-bottom: 50px;
+}
+
+#search input {
+  display: block;
+  grid-area: search;
+  -webkit-appearance: none;
+  appearance: none;
+  width: 100%;
+  height: 100%;
+  background: none;
+  padding: 0 30px 0 60px;
+  border: none;
+  border-radius: 100px;
+  font: 18px/1 system-ui, sans-serif;
+  outline-offset: -8px;
+  outline: none;
+}
+
+#search svg {
+  grid-area: search;
+  overflow: visible;
+  color: white;
+  fill: none;
+  stroke: currentColor;
+}
+
+.spark {
+  fill: currentColor;
+  stroke: none;
+  r: 15;
+}
+
+.spark:nth-child(1) {
+  animation:
+    spark-radius 1s 1s both,
+    spark-one-motion 1s 1s both;
+}
+
+@keyframes spark-radius {
+  0% {
+    r: 0;
+    animation-timing-function: cubic-bezier(0, 0.3, 0, 1.57)
+  }
+  30% {
+    r: 15;
+    animation-timing-function: cubic-bezier(1, -0.39, 0.68, 1.04)
+  }
+  95% {
+    r: 8
+  }
+  99% {
+    r: 10
+  }
+  99.99% {
+    r: 7
+  }
+  100% {
+    r: 0
+  }
+}
+
+@keyframes spark-one-motion {
+  0% {
+    transform: translate(-20%, 50%);
+    animation-timing-function: cubic-bezier(0.63, 0.88, 0, 1.25)
+  }
+  20% {
+    transform: rotate(-0deg) translate(0%, -50%);
+    animation-timing-function: ease-in
+  }
+  80% {
+    transform: rotate(-230deg) translateX(-20%) rotate(-100deg) translateX(15%);
+    animation-timing-function: linear
+  }
+  100% {
+    transform: rotate(-360deg) translate(30px, 100%);
+    animation-timing-function: cubic-bezier(.64, .66, 0, .51)
+  }
+}
+
+.spark:nth-child(2) {
+  animation:
+    spark-radius 1s 1s both,
+    spark-two-motion 1s 1s both;
+}
+
+@keyframes spark-two-motion {
+  0% {
+    transform: translate(120%, 50%) rotate(-70deg) translateY(0%);
+    animation-timing-function: cubic-bezier(0.36, 0.18, 0.94, 0.55)
+  }
+  20% {
+    transform: translate(90%, -80%) rotate(60deg) translateY(-80%);
+    animation-timing-function: cubic-bezier(0.16, 0.77, 1, 0.4)
+  }
+  40% {
+    transform: translate(110%, -50%) rotate(-30deg) translateY(-120%);
+    animation-timing-function: linear
+  }
+  70% {
+    transform: translate(100%, -50%) rotate(120deg) translateY(-100%);
+    animation-timing-function: linear
+  }
+  80% {
+    transform: translate(95%, 50%) rotate(80deg) translateY(-150%);
+    animation-timing-function: cubic-bezier(.64, .66, 0, .51)
+  }
+  100% {
+    transform: translate(100%, 50%) rotate(120deg) translateY(0%)
+  }
+}
+
+.spark:nth-child(3) {
+  animation:
+    spark-radius 1s 1s both,
+    spark-three-motion 1s 1s both;
+}
+
+@keyframes spark-three-motion {
+  0% {
+    transform: translate(50%, 100%) rotate(-40deg) translateX(0%);
+    animation-timing-function: cubic-bezier(0.62, 0.56, 1, 0.54)
+  }
+  30% {
+    transform: translate(40%, 70%) rotate(20deg) translateX(20%);
+    animation-timing-function: cubic-bezier(0, 0.21, 0.88, 0.46)
+  }
+  40% {
+    transform: translate(65%, 20%) rotate(-50deg) translateX(15%);
+    animation-timing-function: cubic-bezier(0, 0.24, 1, 0.62)
+  }
+  60% {
+    transform: translate(60%, -40%) rotate(-50deg) translateX(20%);
+    animation-timing-function: cubic-bezier(0, 0.24, 1, 0.62)
+  }
+  70% {
+    transform: translate(70%, -0%) rotate(-180deg) translateX(20%);
+    animation-timing-function: cubic-bezier(0.15, 0.48, 0.76, 0.26)
+  }
+  100% {
+    transform: translate(70%, -0%) rotate(-360deg) translateX(0%) rotate(180deg) translateX(20%);
+  }
+}
+
+.burst {
+  stroke-width: 3;
+}
+
+.burst :nth-child(2n) {
+  color: #660a0a
+}
+
+.burst :nth-child(3n) {
+  color: #691010
+}
+
+.burst :nth-child(4n) {
+  color: #441414
+}
+
+.burst :nth-child(5n) {
+  color: #f58282
+}
+
+.circle {
+  r: 6;
+}
+
+.rect {
+  width: 10px;
+  height: 10px;
+}
+
+.triangle {
+  d: path("M5,0 L0,10 L10,10 Z");
+}
+
+@media (max-width: 1200px) {
+  .products-container {
+    grid-template-columns: repeat(3, 1fr);
+    margin: 3rem;
+  }
+
+  .product-item img {
+    width: 150px;
+  }
+
+  .products-title {
+    font-size: 24px;
+    margin: 20px;
+  }
+}
+
+@media (max-width: 900px) {
+  .products-container {
+    grid-template-columns: repeat(2, 1fr);
+    margin: 2rem;
+  }
+
+  .product-item img {
+    width: 120px;
+  }
+
+  .products-title {
+    font-size: 20px;
+    margin: 15px;
+  }
+}
+
+@media (max-width: 600px) {
+  .products-container {
+    grid-template-columns: 1fr;
+    margin: 1rem;
+  }
+
+  .product-item {
+    padding: 5px;
+  }
+
+  .product-item img {
+    width: 100px;
+  }
+
+  .products-title {
+    font-size: 18px;
+    margin: 10px;
+  }
+
+  #search {
+    grid-template: "search" 50px / 100%;
+    padding-bottom: 20px;
+  }
+}
+
+.product-link a{
+  transition: .2s;
+}
+
+.product-link{
+  overflow: hidden;
+  transition: .2s;
+}
+
+.product-link img{
+  transition: .2s;
+}
+
+.product-link:hover a{
+  background: #09679d;
+}
+
+.product-link:hover img{
+
+  transform: scale(1.05);
+
+}

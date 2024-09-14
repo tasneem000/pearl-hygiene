@@ -1,0 +1,214 @@
+.contact-span {
+  background: #581412;
+  padding: 5px 10px;
+  border-radius: 5px;
+  color: white;
+  text-transform: uppercase;
+}
+
+.contact-text-container {
+  box-shadow: rgba(255, 255, 255, 0.15) 0px 48px 100px 0px;
+}
+
+.contact-title {
+  color: white;
+  text-align: center;
+  font-size: 30px;
+  text-transform: uppercase;
+  font-weight: 600;
+}
+
+@keyframes animatedTextGradient {
+  to {
+      background-position: 200% center;
+  }
+}
+
+.contact-us-icons {
+  width: 35px;
+  height: 35px;
+  display: block;
+  margin: 0 15px;
+  border: 2px solid white;
+  border-radius: 50%;
+  transition: all 0.2s;
+  color: #581412;
+}
+
+.contact-info-item {
+  display: flex;
+  align-items: center;
+  gap: 15px;
+  margin: 40px 0;
+}
+
+.contact-info-item a:hover {
+  color: #0464a0;
+  text-decoration: underline;
+}
+
+.contact-info-item:hover .contact-us-icons {
+  color: #0464a0;
+}
+
+.message-send-form .flex-input {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.message-send-form input {
+  background: #fff;
+  border: 2px solid #581412;
+  color: #581412;
+  padding: 10px 15px;
+  border-radius: 2px;
+  display: block;
+  margin: 10px;
+  outline: none;
+  width: 100%;
+  transition: .2s;
+}
+
+.message-send-form input:focus {
+  border: 2px solid #c5c5c5;
+  background: ghostwhite;
+}
+
+.message-send-form textarea {
+  overflow: auto;
+  height: 200px;
+  resize: none;
+  padding: 10px 15px;
+  background: #fff;
+  border: 2px solid #581412;
+  color: #581412;
+  border-radius: 2px;
+  display: block;
+  margin: 10px;
+  outline: none;
+  width: 100%;
+  transition: .3s;
+  font-size: 14px;
+}
+
+.message-send-form textarea:focus {
+  border: 2px solid #0464a0;
+  background: ghostwhite;
+}
+
+.message-send-form textarea::-webkit-scrollbar {
+  display: none;
+}
+
+.message-send-form .single-input {
+  padding-right: 20px;
+}
+
+.message-send-form button {
+  width: 150px;
+  background: #581412;
+  color: #fff;
+  padding: 10px;
+  display: block;
+  margin: 10px auto;
+  transition: 0.3s;
+  border-radius: 3px;
+}
+
+.message-send-form button:hover {
+  background: #0464a0;
+  color: white;
+}
+
+.contact-pearl-logo {
+  opacity: 0.15;
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  background-image: url("../../assets/logo.png");
+  background-position: center;
+  background-repeat: no-repeat;
+  background-color: #ececec00;
+}
+
+.map-container {
+  width: 100%;
+  height: 0;
+  padding-bottom: 66.67%; /* Aspect ratio 3:2 */
+  position: relative;
+}
+
+.map-iframe {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  border: 0;
+}
+
+@media (max-width: 768px) {
+  .contact-title {
+      font-size: 24px;
+  }
+
+  .contact-info-item {
+      flex-direction: column;
+      align-items: flex-start;
+      margin: 20px 0;
+  }
+
+  .contact-info-item a {
+      margin-top: 10px;
+  }
+
+  .message-send-form .flex-input {
+      flex-direction: column;
+  }
+
+  .message-send-form input,
+  .message-send-form textarea {
+      margin: 10px 0;
+  }
+
+  .message-send-form button {
+      width: 100px;
+      padding: 8px;
+  }
+  .map-container {
+    padding-bottom: 75%; /* Adjust aspect ratio for smaller screens if needed */
+}
+
+}
+
+@media (max-width: 480px) {
+  .contact-title {
+      font-size: 20px;
+  }
+
+  .contact-us-icons {
+      width: 30px;
+      height: 30px;
+  }
+
+  .contact-info-item {
+      gap: 10px;
+  }
+
+  .message-send-form input,
+  .message-send-form textarea {
+      font-size: 12px;
+      padding: 8px;
+  }
+
+  .message-send-form button {
+      width: 90px;
+      padding: 6px;
+  }
+
+  .map-container {
+    padding-bottom: 100%; /* Adjust aspect ratio for very small screens if needed */
+}
+}

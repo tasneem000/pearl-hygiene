@@ -1,0 +1,97 @@
+.service-section {
+  padding: 70px 70px;
+}
+
+.services-header {
+  text-align: center;
+}
+
+.services-header h1 {
+  font-size: 30px;
+  text-transform: uppercase;
+  color: #581412;
+}
+
+.services-header p {
+  margin: 10px 15%;
+  font-size: 18px;
+  color: gray;
+}
+
+.fancy-brown {
+  width: 100px;
+  display: block;
+  margin: 15px auto;
+  font-size: 30px;
+}
+
+/* For tablets and small desktops */
+@media (max-width: 1024px) {
+  .service-section {
+      padding: 50px 50px;
+  }
+
+  .services-header p {
+      margin: 10px 10%;
+  }
+
+  .fancy-brown {
+      font-size: 28px;
+  }
+}
+
+/* For mobile devices */
+@media (max-width: 768px) {
+  .service-section {
+      padding: 30px 30px;
+  }
+
+  .services-header p {
+      margin: 10px 5%;
+      text-align: justify;
+  }
+
+  .fancy-brown {
+      font-size: 26px;
+  }
+
+  .ourServicesItem {
+      margin-bottom: 30px;
+  }
+}
+
+/* For very small devices */
+@media (max-width: 480px) {
+  .service-section {
+      padding: 20px 20px;
+  }
+
+  .services-header h1 {
+      font-size: 24px;
+  }
+
+  .services-header p {
+      margin: 10px 3%;
+      font-size: 16px;
+  }
+
+  .fancy-brown {
+      font-size: 24px;
+  }
+
+  .ourServicesItem {
+      margin-bottom: 30px;
+  }
+
+  .ourServicesItem h4 {
+      font-size: 18px;
+  }
+
+  .ourServicesItem p {
+      font-size: 14px;
+  }
+
+  .ourServicesItem a {
+      font-size: 14px;
+  }
+}
