@@ -42,3 +42,52 @@ To run this project locally, follow these steps:
 
    ```bash
    git clone https://github.com/yourusername/pearl-hygiene-demo.git
+
+2. Navigate to the project directory:
+   ```bash
+   cd pearl-hygiene-demo
+
+3. Install dependencies:
+   ```bash
+   npm install
+
+4. Create a .env.local file and add your Firebase credentials:
+   ```bash
+   NEXT_PUBLIC_FIREBASE_API_KEY=your_api_key
+   NEXT_PUBLIC_FIREBASE_AUTH_DOMAIN=your_auth_domain
+   NEXT_PUBLIC_FIREBASE_PROJECT_ID=your_project_id
+
+5. Run the development server:
+   ```bash
+   npm run dev
+
+6. Visit http://localhost:3000 to view the website locally.
+
+---
+
+## 🔒 Admin Panel (Demo)
+
+Access the admin panel to manage products and content:
+
+- **URL**: [https://pearl-hygiene-admin-panel.vercel.app](https://pearl-hygiene-admin-panel.vercel.app)
+- **Username**: `admin`
+- **Password**: `123456`
+
+---
+
+## 🖼️ Screenshots
+
+![Pearl Hygiene Website](https://api.pikwy.com/web/66e5465060d63f30114f8e82.png)
+![Admin Panel](https://i.ibb.co.com/JmJ7Qkh/Screenshot-822.png)
+
+---
+
+## 📝 License
+
+This project is open-source and available under the [MIT License](LICENSE).
+
+> **Note**: This is a **replica/demo website** of the company Pearl Hygiene and **is not their official website**.
+
+---
+
+Feel free to contribute and improve this project! ✨
